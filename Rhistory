@@ -1,0 +1,512 @@
+data <- read.csv(file.choose(),header=T)
+str(data)
+data
+data$Survivedf <- factor(data$Survived)
+data
+str(data)
+set.seed(1234)
+g <- runif(nrow(data))
+data <- data[order(g),]
+pd <- sample(2,nrow(data),replace=TRUE,prob=c(0.8,0.2))
+train <- data[pd==1,]
+validate <- data[pd==2,]
+library(party)
+data
+tree <- ctree(Survivedf~MaternalAge+GestationalAge+GeneticAbnorm+Congeniticalabnorm+
+Rhdisease+Placental.UmbillicalcordAccident,data=train)
+tree
+summary(tree)
+plot(tree)
+data <- read.csv(file.choose(),header=T)
+data <- read.csv(file.choose(),header=T,stringsAsFactors = TRUE)
+data <- read.csv(file.choose(),header=T,stringsAsFactors = TRUE)
+data
+data <- read.csv(file.choose(),stringsAsFactors <= TRUE)
+data <- read.csv(file.choose(),stringsAsFactors <= TRUE)
+setwd
+wd
+getwd()
+data <- read.csv(Data.csv,stringsAsFactors <= TRUE)
+data <- read.csv(DATA.csv,stringsAsFactors <- TRUE)
+data <- read.csv("DATA.csv",stringsAsFactors <- TRUE)
+data
+summary(data)
+str(data)
+data$Survivedf <- factor(data$Survived)
+str(data)
+data <- read.csv("DATA.csv",stringsAsFactors <- TRUE)
+summary(data)
+str(data)
+data$Survivedf <- factor(data$Survived)
+data$MaternalAgef <- factor(data$MaternalAge)
+data$GestationalAgef <- factor(data$GestationalAge)
+str(data)
+table(data$Survivedf)
+install.packages("e1071")
+set.seed(1234)
+pd <- sample(2,nrow(data),replace=TRUE,prob=c(0.8,0.2))
+train <- data[pd==1,]
+validate <- data[pd==2,]
+install.packages("rminer")
+library(e1071)
+library(e1071)
+library(rminer)
+model<-naiveBayes(Survivedf ~ .,data=train)
+model<-naiveBayes(Survivedf ~ .,data=train)
+model
+GeneticAbnorm
+prop.table(table(train$GeneticAbnormf,train$Survivedf),2)
+prop.table(table(train$Rhdisease,train$Survivedf),2)
+table(train$Rhdisease,train$Survivedf)
+table(train$Survivedf,train$Rhdisease)
+prop.table(table(train$Survivedf,train$Rhdisease),2)
+prop.table(table(train$Survivedf,train$Rhdisease),2)
+prop.table(table(train$Rhdisease,train$Survivedf),2)
+table(train$Survivedf,train$Rhdisease)
+predictions<-predict(model,validate)
+head(prediction,n=10)
+head(predictions,n=10)
+print(confusionMatrix(predictions,validate$Survivedf,
+positive="Yes",dnn=c("Prediction","True")))
+plotcp(tree1)
+print(confusionMatrix(predictions,validate$Survivedf,
+positive="Yes",dnn = c("Prediction","True")))
+prop.table(table(train$Rhdisease,train$Survivedf),2)
+table(train$Survivedf,train$Rhdisease)
+predictions<-predict(model,validate)
+head(predictions,n=10)
+print(confusionMatrix(predictions,validate$Survivedf,
+positive="Yes",dnn = c("Prediction","True")))
+print(confusionMatrix(predictions,validate$Survivedf,
+positive="1",dnn = c("Prediction","True")))
+print(confusionMatrix(predictions,validate$Survivedf,
+positive=1,dnn = c("Prediction","True")))
+print(confusionMatrix(predictions,validate$Survivedf,
+positive=1,dnn = c("Prediction","True")))
+print(confusionMatrix(predictions,validate$Survivedf))
+print(confusionMatrix(predictions,validate$Survivedf))
+print(confusionMatrix(predictions,validate$Survived,
+positive="Yes",dnn = c("Prediction","True")))
+print(confusionMatrix(predictions,validate$Survivedf,
+positive = "Yes", dnn = c("Prediction","True")))
+print(confusionMatrix(predictions,validate$Survivedf,
+positive = "Yes", dnn = c("Prediction","True")))
+data <- read.csv("DATA.csv",stringsAsFactors <- TRUE)
+data$Survivedf <- factor(data$Survived)
+str(data)
+table(data$Survivedf)
+set.seed(1234)
+pd <- sample(2,nrow(data),replace=TRUE,prob=c(0.8,0.2))
+train <- data[pd==1,]
+validate <- data[pd==2,]
+library(e1071)
+library(rminer)
+model<-naiveBayes(Survivedf ~ .,data=train)
+model
+prop.table(table(train$Rhdisease,train$Survivedf),2)
+table(train$Survivedf,train$Rhdisease)
+predictions<-predict(model,validate)
+head(predictions,n=10)
+print(confusionMatrix(predictions,validate$Survivedf,
+positive = "Yes", dnn = c("Prediction","True")))
+print(confusionMatrix(predictions,validate$Survivedf,
+positive = NULL = c("Prediction","True")))
+print(confusionMatrix(predictions,validate$Survivedf,
+positive = NULL , c("Prediction","True")))
+print(confusionMatrix(predictions,validate$Survivedf,
+positive = NULL , dnn=c("Prediction","True")))
+data <- read.csv("DATA.csv",stringsAsFactors <- TRUE)
+summary(data)
+str(data)
+data$Survivedf <- factor(data$Survived)
+str(data)
+table(data$Survivedf)
+set.seed(1234)
+pd <- sample(2,nrow(data),replace=TRUE,prob=c(0.8,0.2))
+train <- data[pd==1,]
+test <- data[pd==2,]
+library(e1071)
+library(rminer)
+model<-naiveBayes(Survivedf ~ .,data=train)
+model
+prop.table(table(train$Rhdisease,train$Survivedf),2)
+table(train$Survivedf,train$Rhdisease)
+predictions<-predict(model,test)
+head(predictions,n=10)
+print(confusionMatrix(predictions,test$Survivedf,
+positive = "Yes" , dnn=c("Prediction","True")))
+print(confusionMatrix(predictions,test$Survivedf,
+dnn=c("Prediction","True")))
+library(caret)
+print(confusionMatrix(predictions,test$Survivedf,
+positive="Yes", dnn=c("Prediction","True")))
+library(caret)
+print(confusionMatrix(predictions,test$Survivedf,
+positive="Yes", dnn=c("Prediction","True")))
+library(e1071)
+library(e1071)
+library(rminer)
+library(caret)
+library(caret)
+library(rminer)
+library(caret)
+library(e1071)
+library(rminer)
+library(caret)
+model<-naiveBayes(Survivedf ~ .,data=train)
+model
+prop.table(table(train$Rhdisease,train$Survivedf),2)
+table(train$Survivedf,train$Rhdisease)
+predictions<-predict(model,test)
+head(predictions,n=10)
+print(confusionMatrix(predictions,test$Survivedf,
+positive="Yes", dnn=c("Prediction","True")))
+print(confusionMatrix(predictions,test$Survivedf,
+positive = "Yes", dnn = c("Prediction","True")))
+print(confusionMatrix(predictions,test$Survivedf,
+dnn = c("Prediction","True")))
+summary(data)
+table(data$Survivedf)
+table(test$Survivedf)
+print(confusionMatrix(predictions,test$Survivedf,
+dnn = c("Prediction","True")))
+print(confusionMatrix(predictions,test$Survivedf,
+positive=NULL,dnn = c("Prediction","True")))
+metric(test$Survivedf,predictions,c("ACC","PRECISION","TPR","F1"))
+install.packages("Metrics")
+library(Metrics)
+metric(test$Survivedf,predictions,c("ACC","PRECISION","TPR","F1"))
+mmetric(test$Survivedf,predictions,c("ACC","PRECISION","TPR","F1"))
+data <- read.csv("DATA.csv",stringsAsFactors <- TRUE)
+data <- read.csv("DATA.csv",stringsAsFactors <- TRUE)
+summary(data)
+str(data)
+str(data)
+table(data$Survivedf)
+set.seed(1234)
+pd <- sample(2,nrow(data),replace=TRUE,prob=c(0.8,0.2))
+train <- data[pd==1,]
+test <- data[pd==2,]
+library(e1071)
+library(rminer)
+library(caret)
+model<-naiveBayes(Survived ~ .,data=train)
+model<-naiveBayes(Survived ~ .,data=train)
+model
+prop.table(table(train$Rhdisease,train$Survived),2)
+table(train$Survivedf,train$Rhdisease)
+table(train$Survived,train$Rhdisease)
+predictions<-predict(model,test)
+head(predictions,n=10)
+print(confusionMatrix(predictions,test$Survived,
+positive=NULL,dnn = c("Prediction","True")))
+print(confusionMatrix(predictions,test$Survived,
+dnn = c("Prediction","True")))
+table(test$Survivedf)
+library(Metrics)
+mmetric(test$Survivedf,predictions,c("ACC","PRECISION","TPR","F1"))
+data <- read.csv("DATA.csv",stringsAsFactors <- TRUE)
+summary(data)
+str(data)
+data$Survivedf <- factor(data$Survived)
+str(data)
+table(data$Survivedf)
+set.seed(1234)
+pd <- sample(2,nrow(data),replace=TRUE,prob=c(0.8,0.2))
+train <- data[pd==1,]
+test <- data[pd==2,]
+library(e1071)
+library(rminer)
+library(caret)
+model<-naiveBayes(Survivedf ~ .,data=train)
+model
+prop.table(table(train$Rhdisease,train$Survivedf),2)
+table(train$Survivedf,train$Rhdisease)
+predictions<-predict(model,test)
+head(predictions,n=10)
+print(confusionMatrix(predictions,test$Survivedf,
+dnn = c("Prediction","True")))
+test(Survivedf)
+print(test$Survivedf)
+predictions
+data <- read.csv("DATA.csv",stringsAsFactors <- TRUE)
+summary(data)
+data <- read.csv("DATA.csv",stringsAsFactors <- TRUE)
+summary(data)
+str(data)
+data$Survivedf <- factor(data$Survived)
+str(data)
+table(data$Survivedf)
+set.seed(1234)
+pd <- sample(2,nrow(data),replace=TRUE,prob=c(0.8,0.2))
+train <- data[pd==1,]
+test <- data[pd==2,]
+summary(train)
+str(data)
+summary(train)
+summary(test)
+library(e1071)
+library(rminer)
+library(caret)
+model<-naiveBayes(Survivedf~MaternalAge+GestationalAge+GeneticAbnorm+Congeniticalabnorm+
+Rhdisease+Placental.UmbillicalcordAccident,data=train)
+model
+prop.table(table(train$Rhdisease,train$Survivedf),2)
+table(train$Survivedf,train$Rhdisease)
+predictions<-predict(model,test)
+head(predictions,n=10)
+predictions
+library(caret)
+print(confusionMatrix(predictions,test$Survivedf,
+dnn = c("Prediction","True")))
+print(confusionMatrix(predictions,test$Survivedf,
+positive=0,dnn = c("Prediction","True")))
+print(confusionMatrix(predictions,test$Survivedf,
+positive="0",dnn = c("Prediction","True")))
+print(confusionMatrix(predictions,test$Survivedf,
+positive="1",dnn = c("Prediction","True")))
+mmetric(test$Survivedf,predictions,c("ACC","PRECISION","TPR","F1"))
+setwd("C:\Users\Kabi raj pant\Documents\Rproj")
+setwd("~C:\Users\Kabi raj pant\Documents\Rproj")
+setwd("~/Rproj")
+data <- read.csv(file.choose(),header=T)
+data <- read.csv(file.choose(),header=T)
+install.packages("ggplot2")
+data <- read.csv(file.choose(),header=T)
+str(data)
+data
+data$Survivedf <- factor(data$Survived)
+data
+str(data)
+set.seed(1234)
+g <- runif(nrow(data))
+data <- data[order(g),]
+pd <- sample(2,nrow(data),replace=TRUE,prob=c(0.8,0.2))
+train <- data[pd==1,]
+validate <- data[pd==2,]
+library(party)
+data
+tree <- ctree(Survivedf~MaternalAge+GestationalAge+GeneticAbnorm+Congeniticalabnorm+
+Rhdisease+Placental.UmbillicalcordAccident,data=train)
+tree
+summary(tree)
+plot(tree)
+p <- predict(tree,validate,type="prob")
+tab <- table(predict(tree),train$Survivedf)
+print(tab)
+1-sum(diag(tab))/sum(tab)
+testpre <- predict(tree,newdata=validate)
+tab <-table(testpre,validate$Survived)
+print(tab)
+1-sum(diag(tab))/sum(tab)
+library(rpart)
+tree1 <- rpart(Survived~MaternalAge+GestationalAge+GeneticAbnorm+Congeniticalabnorm+
+Rhdisease+Placental.UmbillicalcordAccident,train)
+library(rpart.plot)
+rpart.plot(tree1,extra=1)
+predict(tree1,validate)
+printcp(tree1)
+plotcp(tree1)
+summary(tree1)
+tree1$cptable[which.min(tree1$cptable[,"xerror"]),"CP"]
+pfit<- prune(tree1, cp=   tree1$cptable[which.min(tree1$cptable[,"xerror"]),"CP"])
+plot(pfit, uniform=TRUE,
+main="Pruned Classification Tree for survival")
+text(pfit, use.n=TRUE, all=TRUE, cex=.8)
+library(randomForest)
+library(randomForest)
+library(randomForest)
+library(randomForest)
+library(randomForest)
+data <- read.csv(file.choose(),header=T)
+data$Survived<-as.factor(data$Survived)
+table(data$Survived)
+set.seed(123)
+ind <-sample(2,nrow(data),replace=TRUE,prob=c(0.7,0.3))
+train <- data[ind==1,]
+validate<-data[ind==2,]
+library(randomForest)
+set.seed(222)
+rf <- randomForest(Survived~.,data=train)
+print(rf)
+attributes(rf)
+rf$confusion
+library(caret)
+p1<-predict(rf,train)
+confusionMatrix(p1,train$Survived)
+plot(rf)
+t<-tuneRF(train[,-7],train[,7],stepFactor=0.5,
+plot=TRUE,
+ntreeTry=200,trace=TRUE,
+improve=0.05)
+rf <- randomForest(Survived~.,data=train,
+ntree=300,mtry=2,
+importance=TRUE,
+proximity=TRUE)
+varImpPlot(rf)
+partialPlot(rf,train,GestationalAge,"0")
+str(data)
+data
+data
+str(data)
+str(data)
+data <- read.csv(file.choose(),header=T)
+str(data)
+data <- read.csv(file.choose(),header=T)
+data
+data$Survivedf <- factor(data$Survived)
+data
+str(data)
+set.seed(1234)
+g <- runif(nrow(data))
+data <- data[order(g),]
+pd <- sample(2,nrow(data),replace=TRUE,prob=c(0.8,0.2))
+train <- data[pd==1,]
+validate <- data[pd==2,]
+View(train)
+View(train)
+View(validate)
+View(validate)
+View(train)
+library(party)
+data
+View(data)
+View(data)
+data
+tree <- ctree(Survivedf~MaternalAge+GestationalAge+GeneticAbnorm+Congeniticalabnorm+
+Rhdisease+Placental.UmbillicalcordAccident,data=train)
+tree
+summary(tree)
+plot(tree)
+tab <- table(predict(tree),train$Survivedf)
+print(tab)
+View(validate)
+View(validate)
+View(validate)
+View(validate)
+validate<- validate[,1-6]
+print(validate)
+View(validate)
+View(validate)
+validate <- data[pd==2,]
+print(tab)
+1-sum(diag(tab))/sum(tab)
+sum(diag(tab))/sum(tab)
+testpre <- predict(tree,newdata=validate)
+tab <-table(testpre,validate$Survived)
+print(tab)
+1-sum(diag(tab))/sum(tab)
+library(rpart)
+tree1 <- rpart(Survived~MaternalAge+GestationalAge+GeneticAbnorm+Congeniticalabnorm+
+Rhdisease+Placental.UmbillicalcordAccident,train)
+library(rpart.plot)
+rpart.plot(tree1,extra=1)
+predict(tree1,validate)
+printcp(tree1)
+plotcp(tree1)
+summary(tree1)
+tree1$cptable[which.min(tree1$cptable[,"xerror"]),"CP"]
+pfit<- prune(tree1, cp=   tree1$cptable[which.min(tree1$cptable[,"xerror"]),"CP"])
+plot(pfit, uniform=TRUE,
+main="Pruned Classification Tree for survival")
+text(pfit, use.n=TRUE, all=TRUE, cex=.8)
+library(randomForest)
+library(randomForest)
+data <- read.csv(file.choose(),header=T)
+data$Survived<-as.factor(data$Survived)
+table(data$Survived)
+set.seed(123)
+ind <-sample(2,nrow(data),replace=TRUE,prob=c(0.7,0.3))
+train <- data[ind==1,]
+validate<-data[ind==2,]
+library(randomForest)
+rf <- randomForest(Survived~.,data=train)
+print(rf)
+print(rf)
+rf <- randomForest(Survived~.,data=train)
+data <- read.csv(file.choose(),header=T)
+data$Survived<-as.factor(data$Survived)
+table(data$Survived)
+set.seed(123)
+ind <-sample(2,nrow(data),replace=TRUE,prob=c(0.7,0.3))
+train <- data[ind==1,]
+validate<-data[ind==2,]
+library(randomForest)
+set.seed(222)
+rf <- randomForest(Survived~.,data=train)
+print(rf)
+attributes(rf)
+rf$confusion
+library(caret)
+p1<-predict(rf,train)
+confusionMatrix(p1,train$Survived)
+plot(rf)
+p2<-predict(rf,validate)
+confusionMatrix(p2,validate$Survived)
+plot(rf)
+t<-tuneRF(train[,-7],train[,7],stepFactor=0.5,
+plot=TRUE,
+ntreeTry=200,trace=TRUE,
+improve=0.05)
+rf <- randomForest(Survived~.,data=train,
+ntree=300,mtry=2,
+importance=TRUE,
+proximity=TRUE)
+varImpPlot(rf)
+partialPlot(rf,train,GestationalAge,"0")
+varImpPlot(rf)
+data <- read.csv("DATA.csv",stringsAsFactors <- TRUE)
+data <- read.csv(file.choose(),stringsAsFactors <- TRUE)
+View(data)
+View(data)
+summary(data)
+str(data)
+data$Survivedf <- factor(data$Survived)
+str(data)
+table(data$Survivedf)
+set.seed(1234)
+pd <- sample(2,nrow(data),replace=TRUE,prob=c(0.8,0.2))
+train <- data[pd==1,]
+test <- data[pd==2,]
+summary(train)
+summary(test)
+library(e1071)
+library(rminer)
+model<-naiveBayes(Survivedf~MaternalAge+GestationalAge+GeneticAbnorm+Congeniticalabnorm+
+Rhdisease+Placental.UmbillicalcordAccident,data=train)
+model
+prop.table(table(train$Rhdisease,train$Survivedf),2)
+table(train$Survivedf,train$Rhdisease)
+predictions<-predict(model,test)
+head(predictions,n=10)
+View(data)
+View(data)
+head(predictions,n=10)
+predictions
+library(caret)
+print(confusionMatrix(predictions,test$Survivedf,
+positive="1",dnn = c("Prediction","True")))
+table(test$Survivedf)
+print(test$Survivedf)
+library(Metrics)
+mmetric(test$Survivedf,predictions,c("ACC","PRECISION","TPR","F1"))
+data <- read.csv(file.choose(),header=T)
+str(data)
+data
+data
+data$Survivedf <- factor(data$Survived)
+data
+str(data)
+set.seed(1234)
+g <- runif(nrow(data))
+data <- data[order(g),]
+pd <- sample(2,nrow(data),replace=TRUE,prob=c(0.8,0.2))
+train <- data[pd==1,]
+validate <- data[pd==2,]
+library(party)
+data
+tree <- ctree(Survivedf~MaternalAge+GestationalAge+GeneticAbnorm+Congeniticalabnorm+
+Rhdisease+Placental.UmbillicalcordAccident,data=train)
+tree
+summary(tree)
+plot(tree)
